@@ -3,6 +3,7 @@
 document.querySelector("#reset1").onclick = function(event) {
     borrarIntegrantesAnteriores();
     document.querySelector("#texto-respuesta").textContent = "";
+    document.querySelector("#calcular").className = "oculto";
     event.preventDefault();
 }
 
