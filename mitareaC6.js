@@ -15,7 +15,7 @@ document.querySelector("#crear-formularios").onclick = function(event) {
     borrarIntegrantesAnteriores();
     
     if(cantidadIntegrantes < 100 && cantidadIntegrantes > 0) {
-        for(i = 1; i <= cantidadIntegrantes; i++) {
+        for(let i = 1; i <= cantidadIntegrantes; i++) {
             
 
 
@@ -49,7 +49,7 @@ document.querySelector("#crear-formularios").onclick = function(event) {
 document.querySelector("#calcular").onclick = function(event) {
     const cantidadIntegrantes = Number(document.querySelector("#cantidad-integrantes").value)
     const listaEdades = []
-    for(i = 1; i <= cantidadIntegrantes; i++) {
+    for(let i = 1; i <= cantidadIntegrantes; i++) {
         edadIntegrante = Number(document.querySelector(`#integrante${i}`).value) 
         
         if(edadIntegrante !== 0) {
@@ -71,7 +71,7 @@ document.querySelector("#calcular").onclick = function(event) {
 
 function max(array) {
     let max = array[0];
-    for(i = 0; i < array.length; i++) {
+    for(let i = 0; i < array.length; i++) {
         if(array[i] > max){
             max = array[i]
         }
@@ -82,7 +82,7 @@ function max(array) {
 
 function min(array) {
     let min = array[0];
-    for(i = 0; i < array.length; i++) {
+    for(let i = 0; i < array.length; i++) {
         if(array[i] < min){
             min = array[i]
         }
@@ -93,7 +93,7 @@ function min(array) {
 
 function promedio(array) {
     let suma = 0;
-    for(i = 0; i < array.length; i++) {
+    for(let i = 0; i < array.length; i++) {
         suma += array[i];
     }
     return Math.round(suma/array.length);
